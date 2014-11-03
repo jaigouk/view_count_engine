@@ -1,0 +1,18 @@
+%h1 Listing Metrics
+%table
+  %tr
+    %th Name
+    %th Duration
+    %th Started at
+    %th Payload
+    %th
+  = content_tag_for :tr, @metrics do |metric|
+    %td = metric.name
+    %td "#{metric.duration / 1000} ms"
+    %td
+      %ul
+        - metric.payload.each do |k, v|
+          %li
+            = "#{k.humanize} : #{v}"
+    %td
+      = link_to 'Destroy', metric_path(metric), method: :delete, data: {confirm: 'Are you sure?'}

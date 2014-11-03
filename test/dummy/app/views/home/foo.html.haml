@@ -1,0 +1,24 @@
+- count_exposure_for(@meme1)
+%h1 Home#foo
+
+%p
+  - if able_to_show_svg?
+    %svg{style: 'width: 500px, height: 300px'}
+
+      %rect{x:"0", y:"0", width:"500", height:"300", fill: "orange"}
+
+      %circle{cx: "250",cy: "250", r: "22", fill: "black", stroke: "red"}
+
+      %line{x1: "0", y1: "30", x2: "500", y2: "30", stroke: "blue"}
+
+      %text{x: "350", y: "25", fill: "white", font: {family: "serif", size: "25"}}
+        ss
+
+      %circle{cx: "65", cy: "65", r: "42", fill: "yellow"}
+  - else
+    = "Meme Count: #{@meme1.temp_view_count}"
+
+%span
+  span1
+%span
+  span2
