@@ -1,4 +1,4 @@
-# PrEngine
+# ViewCountEngine
 
 This is a mountable rails engine that gathers view counts for each instance in redis and saves them into mongodb.
 
